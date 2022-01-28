@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>***********</title>
+    <title>予定登録</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
@@ -11,37 +11,15 @@
 <body>
 
     <form class="w-75 mx-auto">
-        <p class="mt-3">分娩日</p>
+        <p class="mt-3">予定を通知したい日</p>
         <div>
             <input type="date" class="form-control w-100 mt-1" name="day" placeholder="" required>
 
         </div>
-        <p class="mt-3">牛の番号</p>
+        <p class="mt-3">通知内容</p>
         <div>
             <input class="form-control w-100 mt-1" name="no" required>
-        </div>
-        <p class="mt-3">区分</p>
-        <div>
-            <select class="form-control w-100 mt-1" name="kubun" required>
-                <option value="通常授精">通常授精</option>
-                <option value="採卵授精">採卵授精</option>
-                <option value="体内受精卵移植">体内受精卵移植</option>
-                <option value="体外受精卵移植">体外受精卵移植</option>
-             
-            </select>
-        <p class="mt-3">種雄牛名</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="kubun2" required>
-        </div>
-        <p class="mt-3">授精師名</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="kubun3" required>
-        <p class="mt-3">授精師名</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="kubun4" required>
-        <p class="mt-3">授精師名</p>
-        <div>
-            <input class="form-control w-100 mt-1" name="kubun5" required>
+
 
 
 
@@ -60,7 +38,7 @@
     <script>
 
         $(document).ready(function () {
-            const liffId = "**************************************";
+            const liffId = "1656831272-WPG77gPX";
             initializeLiff(liffId);
         })
 
@@ -97,7 +75,7 @@
                 const kubun3 = $('input[name="kubun3"]').val();
                 const kubun4 = $('input[name="kubun4"]').val();
                 const kubun5 = $('input[name="kubun5"]').val();
-                const msg = `********\n${day}\n${no}\n${kubun}\n${kubun2}\n${kubun3}\n${kubun4}\n${kubun5}`;
+                const msg = `予定登録\n${day}\n${no}`;
                 sendText(msg);
                 return false;
             });
